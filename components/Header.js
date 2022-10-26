@@ -7,11 +7,9 @@ export default function Header() {
     <StyledHeader>
       <FishIcon size="4rem" />
       <StyledNavigation>
-        <Anchor href='/'>
-          Startseite
-        </Anchor>
-        <Anchor href='/products'>Produkte</Anchor>
-        <Anchor href='/categories'>Kategorien</Anchor>
+        <Anchor href="/">Startseite</Anchor>
+        <Anchor href="/products">Produkte</Anchor>
+        <Anchor href="/categories">Kategorien</Anchor>
       </StyledNavigation>
     </StyledHeader>
   );
@@ -48,6 +46,4 @@ const StyledNavigation = styled.nav`
   gap: 2rem;
 `;
 
-export {
-  Anchor
-}
+export { Anchor };
