@@ -1,4 +1,4 @@
-export default function Error404() {
+function Error404() {
   return (
     <>
       <h1>Seite wurde nicht gefunden liebe Fische! 😿</h1>
@@ -6,3 +6,5 @@ export default function Error404() {
     </>
   );
 }
+
+export default Error404

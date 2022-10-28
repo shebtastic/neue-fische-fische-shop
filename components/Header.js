@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TbFish } from "react-icons/tb";
 import Link from "next/link";
 
-export default function Header() {
+function Header() {
   return (
     <StyledHeader>
       <FishIcon size="4rem" />
@@ -47,3 +47,4 @@ const StyledNavigation = styled.nav`
 `;
 
 export { Anchor };
+export default Header

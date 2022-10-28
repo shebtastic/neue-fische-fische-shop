@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Footer() {
+function Footer() {
   return (
     <StyledFooter>
       <p>Fisch Shop</p>
@@ -16,3 +16,5 @@ const StyledFooter = styled.footer`
   padding: 0 1rem;
   height: 4rem;
 `;
+
+export default Footer

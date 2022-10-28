@@ -7,7 +7,23 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'unsplash.com'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org'
+      },
+      {
+        protocol: 'https',
+        hostname: 'regenbogenfisch.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com'
+      },
     ]
   },
   compiler: {

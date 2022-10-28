@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -36,3 +36,5 @@ const Background = styled.div`
     display: none;
   }
 `;
+
+export default Home

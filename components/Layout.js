@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 
-export default function Layout({ children }) {
+function Layout({ children }) {
   return (
     <>
       <Header />
@@ -17,3 +17,5 @@ const StyledMain = styled.main`
   padding: 1rem;
   min-height: calc(100vh - 8rem);
 `;
+
+export default Layout
