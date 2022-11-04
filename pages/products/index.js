@@ -40,6 +40,7 @@ function Products() {
           </li>
         ))}
       </GridList>
+      <Anchor href={`/products/new`}>Neues Produkt erstellen.</Anchor>
     </>
   );
 }
