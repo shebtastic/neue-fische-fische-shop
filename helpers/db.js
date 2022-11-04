@@ -25,6 +25,29 @@ async function getAllProducts() {
     return products
 }
 
+async function getProductById(id) {
+    await connectDatabase()
+
+    const product = await Product.findOne({id}, { _id: false, __v: false })
+    return product
+}
+
+async function updateProductById(id, product) {
+    await connectDatabase()
+
+    await Product.updateOne({id}, product)
+    const updatedProduct = await getProductById(id)
+    return updatedProduct
+}
+
+async function deleteProductById(id) {
+    await connectDatabase()
+
+    const product = await getProductById(id)
+    await Product.deleteOne({id})
+    return product
+}
+
 async function createProduct(product) {
     await connectDatabase()
 
@@ -43,4 +66,7 @@ async function createProduct(product) {
 export {
     getAllProducts,
     createProduct,
+    getProductById,
+    updateProductById,
+    deleteProductById,
 }
