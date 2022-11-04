@@ -10,17 +10,17 @@ function EditProductDetailsPage() {
 
     const {data, mutate} = useSWR(`/api/products/${productId}`, fetcher)
 
-    function handleSubmit(product) {
+    async function handleSubmit(product) {
         //hier kommt ein fetch `PATCH`
-        fetch(`/api/products/${productId}`, {
+        await fetch(`/api/products/${productId}`, {
             method: "PATCH",
             body: JSON.stringify(product)
         })
         mutate()
     }
 
-    function deleteProduct() {
-        fetch(`/api/products/${productId}`, {
+    async function deleteProduct() {
+        await fetch(`/api/products/${productId}`, {
             method: "DELETE",
         })
     }
