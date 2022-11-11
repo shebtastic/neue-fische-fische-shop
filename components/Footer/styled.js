@@ -1,12 +1,4 @@
-import styled from "styled-components";
-
-function Footer() {
-  return (
-    <StyledFooter>
-      <p>Fisch Shop</p>
-    </StyledFooter>
-  );
-}
+import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   border-top: 1px solid #0c2c4d;
@@ -17,4 +9,4 @@ const StyledFooter = styled.footer`
   height: 4rem;
 `;
 
-export default Footer
+export { StyledFooter };
