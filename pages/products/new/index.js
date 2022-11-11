@@ -1,17 +1,17 @@
-import { useState } from "react";
-import ProductForm from "../../../components/ProductForm";
+import { useState } from 'react';
+import Form from '../../../components/Form';
 
-function NewProductPage() {
-  const [error, setError] = useState(false)
+export default function NewProductPage() {
+  const [error, setError] = useState(false);
 
   async function sendProduct(product) {
     const response = await fetch('/api/products', {
-        method: 'POST',
-        body: JSON.stringify(product)
-    })
+      method: 'POST',
+      body: JSON.stringify(product),
+    });
 
-    if(response.status !== 201) {
-        setError(true)
+    if (response.status !== 201) {
+      setError(true);
     }
   }
 
@@ -19,9 +19,7 @@ function NewProductPage() {
     <>
       <h1>Add Product</h1>
       {error && <h2>OMG ERROR!</h2>}
-      <ProductForm onSubmit={sendProduct} />
+      <Form onSubmit={sendProduct} />
     </>
   );
 }
-
-export default NewProductPage;
